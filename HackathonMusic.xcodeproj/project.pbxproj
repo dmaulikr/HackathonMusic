@@ -25,6 +25,11 @@
 		B000ABE11CC2A50C00781D6A /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABE01CC2A50C00781D6A /* SettingsVC.m */; };
 		B000ABE51CC2BDC900781D6A /* HMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABE41CC2BDC900781D6A /* HMUser.m */; };
 		B000ABE71CC2D07B00781D6A /* pushbody.json in Resources */ = {isa = PBXBuildFile; fileRef = B000ABE61CC2D07B00781D6A /* pushbody.json */; };
+		B000ABE91CC2D63900781D6A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B000ABE81CC2D63900781D6A /* AVFoundation.framework */; };
+		B000ABED1CC2D67300781D6A /* HMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABEC1CC2D67300781D6A /* HMPlayer.m */; };
+		B000ABF01CC2E09200781D6A /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABEF1CC2E09200781D6A /* Song.m */; };
+		B000ABF21CC2E8C100781D6A /* songs.json in Resources */ = {isa = PBXBuildFile; fileRef = B000ABF11CC2E8C100781D6A /* songs.json */; };
+		B000ABF51CC2E97E00781D6A /* rooster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B000ABF41CC2E97E00781D6A /* rooster.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,13 @@
 		B000ABE31CC2BDC900781D6A /* HMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMUser.h; sourceTree = "<group>"; };
 		B000ABE41CC2BDC900781D6A /* HMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMUser.m; sourceTree = "<group>"; };
 		B000ABE61CC2D07B00781D6A /* pushbody.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pushbody.json; sourceTree = "<group>"; };
+		B000ABE81CC2D63900781D6A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B000ABEB1CC2D67300781D6A /* HMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPlayer.h; sourceTree = "<group>"; };
+		B000ABEC1CC2D67300781D6A /* HMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPlayer.m; sourceTree = "<group>"; };
+		B000ABEE1CC2E09200781D6A /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		B000ABEF1CC2E09200781D6A /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		B000ABF11CC2E8C100781D6A /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
+		B000ABF41CC2E97E00781D6A /* rooster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rooster.mp3; path = ../../../../Developer/of_v0.9.2_osx_release/examples/sound/soundPlayerFFTExample/bin/data/sounds/rooster.mp3; sourceTree = "<group>"; };
 		BD0BD7DE1A21073C4609B058 /* Pods-HackathonMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1FFA21F4D2044E233BEE47 /* Pods-HackathonMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B000ABE91CC2D63900781D6A /* AVFoundation.framework in Frameworks */,
 				7C01B0C1846BDF8D6014A40C /* libPods-HackathonMusic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +155,8 @@
 		8EF1C1FA1CC2784300C394AF /* HackathonMusic */ = {
 			isa = PBXGroup;
 			children = (
+				B000ABF31CC2E96B00781D6A /* MusicFiles */,
+				B000ABEA1CC2D65300781D6A /* Player */,
 				B000ABE21CC2BDA700781D6A /* Model */,
 				B000ABDE1CC2A4EF00781D6A /* Tab3 */,
 				8EF1C2321CC2813800C394AF /* 3rd Party */,
@@ -154,6 +169,7 @@
 				B000ABD91CC2A1B600781D6A /* VisaAPI.h */,
 				B000ABDA1CC2A1B600781D6A /* VisaAPI.m */,
 				B000ABE61CC2D07B00781D6A /* pushbody.json */,
+				B000ABF11CC2E8C100781D6A /* songs.json */,
 				B000ABDB1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 */,
 				8EF1C2071CC2784300C394AF /* Assets.xcassets */,
 				8EF1C2091CC2784300C394AF /* LaunchScreen.storyboard */,
@@ -233,13 +249,33 @@
 			children = (
 				B000ABE31CC2BDC900781D6A /* HMUser.h */,
 				B000ABE41CC2BDC900781D6A /* HMUser.m */,
+				B000ABEE1CC2E09200781D6A /* Song.h */,
+				B000ABEF1CC2E09200781D6A /* Song.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		B000ABEA1CC2D65300781D6A /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				B000ABEB1CC2D67300781D6A /* HMPlayer.h */,
+				B000ABEC1CC2D67300781D6A /* HMPlayer.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		B000ABF31CC2E96B00781D6A /* MusicFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B000ABF41CC2E97E00781D6A /* rooster.mp3 */,
+			);
+			name = MusicFiles;
 			sourceTree = "<group>";
 		};
 		F05BEDDBF7C30E4624033BBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B000ABE81CC2D63900781D6A /* AVFoundation.framework */,
 				6ADA1E8B9954796F42937917 /* libPods-HackathonMusic.a */,
 			);
 			name = Frameworks;
@@ -351,11 +387,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B000ABF21CC2E8C100781D6A /* songs.json in Resources */,
 				B000ABE71CC2D07B00781D6A /* pushbody.json in Resources */,
 				8EF1C20B1CC2784300C394AF /* LaunchScreen.storyboard in Resources */,
 				B000ABDD1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 in Resources */,
 				8EF1C2081CC2784300C394AF /* Assets.xcassets in Resources */,
 				8EF1C2061CC2784300C394AF /* Main.storyboard in Resources */,
+				B000ABF51CC2E97E00781D6A /* rooster.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B000ABF01CC2E09200781D6A /* Song.m in Sources */,
 				8EF1C2391CC2815100C394AF /* YSLDraggableCardContainer.m in Sources */,
 				B000ABDC1CC2A1B600781D6A /* VisaAPI.m in Sources */,
 				8EF1C2381CC2815100C394AF /* YSLCardView.m in Sources */,
@@ -437,6 +476,7 @@
 				8EF1C2311CC2807500C394AF /* HMMusicDiscoveryVC.m in Sources */,
 				8EF1C1FD1CC2784300C394AF /* main.m in Sources */,
 				8EF1C2401CC2872E00C394AF /* CardView.m in Sources */,
+				B000ABED1CC2D67300781D6A /* HMPlayer.m in Sources */,
 				B000ABE51CC2BDC900781D6A /* HMUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
