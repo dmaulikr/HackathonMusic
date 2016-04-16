@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'HackathonMusic' do
-
+pod 'MarqueeLabel'
 end
 
 target 'HackathonMusicTests' do

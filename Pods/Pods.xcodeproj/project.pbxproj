@@ -10,27 +10,196 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>09C5E90726D2521A760312DBF50D9358</key>
+		<key>07190D8334258ADD9B92D48AE865F909</key>
 		<dict>
-			<key>children</key>
-			<array/>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MarqueeLabel-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0F8D2E47FE03D3B91B51069F7C273AF4</key>
+		<key>0BD83FA485001CB53DCABD21753D3F25</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>MarqueeLabel.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C3D644A2D4230061134A21A2B31A6DA</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>9F771C6388090E351D987536413CDF93</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0EF701F12DD5DFC3780FFB6D1A9DE07E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-HackathonMusic-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0F165523615C781790B239419D2987D3</key>
 		<dict>
 			<key>children</key>
-			<array/>
+			<array>
+				<string>21CAA8EC49C1000F838307896AD554A2</string>
+				<string>A989602E5B0C02B1B63C308CD1E074EC</string>
+				<string>315FD4903A24C206886613126227D184</string>
+				<string>0EF701F12DD5DFC3780FFB6D1A9DE07E</string>
+				<string>FCF2CEAA31D95F796B7267F710272D5F</string>
+				<string>9F771C6388090E351D987536413CDF93</string>
+				<string>518A9F69645DEEE5ECF6BA1FE0E66C9A</string>
+			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
-			<string>Frameworks</string>
+			<string>Pods-HackathonMusic</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-HackathonMusic</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12C6DBD05049598BFD68257E78336213</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EED597571785B03C6D49950CA8655617</string>
+				<string>BFE6473A5371A88C094F0EF7BC5F1DB9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1A3155A1CE86FD415A2FA193545BAB2E</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>1A6A3869E18CDD6F91C68CAEC7E68939</string>
+			<key>buildPhases</key>
+			<array>
+				<string>9D16FC52A5258D1E3F2446585FBBCC64</string>
+				<string>12C6DBD05049598BFD68257E78336213</string>
+				<string>7C008FF729B2EA0587191851B566EF9E</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>MarqueeLabel</string>
+			<key>productName</key>
+			<string>MarqueeLabel</string>
+			<key>productReference</key>
+			<string>892F3346EEE3AFBD68023AA56EC7995D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>1A6A3869E18CDD6F91C68CAEC7E68939</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>31EB7678FF0B636207D387F442EDBCD9</string>
+				<string>9DF90456B95ECC39CE053E117CC5C72E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>1CED2A4F5F36627F41A58F511C6F4A40</key>
+		<dict>
+			<key>fileRef</key>
+			<string>315FD4903A24C206886613126227D184</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F0CE63D3580FB733F834D5B08EA83E7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BDBF893FA883AA50AFCD29A690464C1E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>21CAA8EC49C1000F838307896AD554A2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-HackathonMusic-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>258B0C8029B3982F03A30ED9FB271283</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
 		</dict>
 		<key>2B389FAB51F6EEA43F72CA7BDC8E8E28</key>
 		<dict>
@@ -105,6 +274,19 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>2CE45F472249C84E02153BA2E055C191</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MarqueeLabel-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
 			<key>buildConfigurations</key>
@@ -118,6 +300,164 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
+		</dict>
+		<key>30976F399B0A8CC424D1572D6B5FAF3F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>518A9F69645DEEE5ECF6BA1FE0E66C9A</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>315FD4903A24C206886613126227D184</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-HackathonMusic-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>31EB7678FF0B636207D387F442EDBCD9</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0BD83FA485001CB53DCABD21753D3F25</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>335F1FDC06785E2524A3389F3D8B90FE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1CED2A4F5F36627F41A58F511C6F4A40</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3926C638AD0708942C88C2BC89261735</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>258B0C8029B3982F03A30ED9FB271283</string>
+				<string>B18F24645AA4D651DFC7B69A3A0833DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F72C186E096153B62FAB92D292A6E13</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>7DB7651D8168839E27ED5954CAA650B2</string>
+			<key>buildPhases</key>
+			<array>
+				<string>335F1FDC06785E2524A3389F3D8B90FE</string>
+				<string>1F0CE63D3580FB733F834D5B08EA83E7</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>83790C0D75FD8A2F2D07A489E607C77C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-HackathonMusic</string>
+			<key>productName</key>
+			<string>Pods-HackathonMusic</string>
+			<key>productReference</key>
+			<string>E6ECA7C11C53C51B662CDD2746DAEF21</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>433CD3331B6C3787F473C941B61FC68F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3926C638AD0708942C88C2BC89261735</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>518A9F69645DEEE5ECF6BA1FE0E66C9A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-HackathonMusic.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5A0C6FE968931D888F00C9EC18DDF5BC</key>
 		<dict>
@@ -187,19 +527,254 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>6C94731B899C2DDEADBE8F632F93896B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MarqueeLabel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>717C09DF56043EBF4807EEF9DBCC4D7C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>892F3346EEE3AFBD68023AA56EC7995D</string>
+				<string>E6ECA7C11C53C51B662CDD2746DAEF21</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C008FF729B2EA0587191851B566EF9E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D3B6D7C45CC50CABC1C3390589AB1579</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
 			<key>children</key>
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>0F8D2E47FE03D3B91B51069F7C273AF4</string>
-				<string>09C5E90726D2521A760312DBF50D9358</string>
-				<string>F6CCA5D896907CE7506C37FD31FC265A</string>
+				<string>433CD3331B6C3787F473C941B61FC68F</string>
+				<string>F6E65EC5002AA1C2A069B1EECFC892BA</string>
+				<string>717C09DF56043EBF4807EEF9DBCC4D7C</string>
+				<string>E66795DB712D883B0C1CB90D826AFACA</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7DB7651D8168839E27ED5954CAA650B2</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0C3D644A2D4230061134A21A2B31A6DA</string>
+				<string>30976F399B0A8CC424D1572D6B5FAF3F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>83790C0D75FD8A2F2D07A489E607C77C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MarqueeLabel</string>
+			<key>target</key>
+			<string>1A3155A1CE86FD415A2FA193545BAB2E</string>
+			<key>targetProxy</key>
+			<string>AAB1AEF46F09B75035A304127FB37883</string>
+		</dict>
+		<key>892F3346EEE3AFBD68023AA56EC7995D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libMarqueeLabel.a</string>
+			<key>path</key>
+			<string>libMarqueeLabel.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>9922059CFB61BA0DED1DCF324504FF26</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6C94731B899C2DDEADBE8F632F93896B</string>
+				<string>9F3C5111FE93CC2B34298D5C92681D30</string>
+				<string>AC8BFFC72FF863D61FE32FF27B21B01E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MarqueeLabel</string>
+			<key>path</key>
+			<string>MarqueeLabel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D16FC52A5258D1E3F2446585FBBCC64</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FF8FC6B3E43BD286A560E2F91F9DC162</string>
+				<string>AC55D864002FF90342582CBBDF01ADD8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9DF90456B95ECC39CE053E117CC5C72E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0BD83FA485001CB53DCABD21753D3F25</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9F3C5111FE93CC2B34298D5C92681D30</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MarqueeLabel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F771C6388090E351D987536413CDF93</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-HackathonMusic.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A989602E5B0C02B1B63C308CD1E074EC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-HackathonMusic-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AAB1AEF46F09B75035A304127FB37883</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>1A3155A1CE86FD415A2FA193545BAB2E</string>
+			<key>remoteInfo</key>
+			<string>MarqueeLabel</string>
+		</dict>
+		<key>AC55D864002FF90342582CBBDF01ADD8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9F3C5111FE93CC2B34298D5C92681D30</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AC8BFFC72FF863D61FE32FF27B21B01E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0BD83FA485001CB53DCABD21753D3F25</string>
+				<string>07190D8334258ADD9B92D48AE865F909</string>
+				<string>2CE45F472249C84E02153BA2E055C191</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MarqueeLabel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B18F24645AA4D651DFC7B69A3A0833DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
 		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
@@ -217,6 +792,34 @@
 			<string>SOURCE_ROOT</string>
 			<key>xcLanguageSpecificationIdentifier</key>
 			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>BDBF893FA883AA50AFCD29A690464C1E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>258B0C8029B3982F03A30ED9FB271283</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BFE6473A5371A88C094F0EF7BC5F1DB9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B18F24645AA4D651DFC7B69A3A0833DB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D3B6D7C45CC50CABC1C3390589AB1579</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6C94731B899C2DDEADBE8F632F93896B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -244,7 +847,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>09C5E90726D2521A760312DBF50D9358</string>
+			<string>717C09DF56043EBF4807EEF9DBCC4D7C</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -252,18 +855,78 @@
 			<key>projectRoot</key>
 			<string></string>
 			<key>targets</key>
-			<array/>
+			<array>
+				<string>1A3155A1CE86FD415A2FA193545BAB2E</string>
+				<string>3F72C186E096153B62FAB92D292A6E13</string>
+			</array>
 		</dict>
-		<key>F6CCA5D896907CE7506C37FD31FC265A</key>
+		<key>E66795DB712D883B0C1CB90D826AFACA</key>
 		<dict>
 			<key>children</key>
-			<array/>
+			<array>
+				<string>0F165523615C781790B239419D2987D3</string>
+			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Targets Support Files</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6ECA7C11C53C51B662CDD2746DAEF21</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-HackathonMusic.a</string>
+			<key>path</key>
+			<string>libPods-HackathonMusic.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>EED597571785B03C6D49950CA8655617</key>
+		<dict>
+			<key>fileRef</key>
+			<string>258B0C8029B3982F03A30ED9FB271283</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F6E65EC5002AA1C2A069B1EECFC892BA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9922059CFB61BA0DED1DCF324504FF26</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FCF2CEAA31D95F796B7267F710272D5F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-HackathonMusic-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FF8FC6B3E43BD286A560E2F91F9DC162</key>
+		<dict>
+			<key>fileRef</key>
+			<string>07190D8334258ADD9B92D48AE865F909</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>

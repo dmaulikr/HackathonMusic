@@ -46,7 +46,7 @@
         <!--Item 1-->
         <scene sceneID="158-Lx-Ysl">
             <objects>
-                <viewController id="enB-lu-HYF" sceneMemberID="viewController">
+                <viewController id="enB-lu-HYF" customClass="HMMusicDiscoveryVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gOP-4U-IO2"/>
                         <viewControllerLayoutGuide type="bottom" id="igX-Cs-qLk"/>
