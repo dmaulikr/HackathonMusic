@@ -13,6 +13,7 @@
 @interface SettingsVC ()
 
 @property (strong, nonatomic) NSDecimalNumber * minCredits;
+@property (weak, nonatomic) IBOutlet UILabel *ResponseLabel;
 
 @end
 
@@ -29,6 +30,10 @@
 - (IBAction)TriggerAsyncCall:(id)sender {
     NSComparisonResult comparison =[[HMUser currentUser].credits compare:self.minCredits];
     if (comparison == NSOrderedDescending) {
+        [VisaAPI shared].callFinished = ^ void (NSDictionary * response) {
+            self.ResponseLabel.text = response.description;
+        };
+        
         [VisaAPI triggerCall];
     } else {
         UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Not Yet" message:@"You don't have enough credits to cash in yet" preferredStyle:UIAlertControllerStyleAlert];

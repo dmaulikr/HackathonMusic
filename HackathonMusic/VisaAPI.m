@@ -79,6 +79,7 @@
 {
     NSHTTPURLResponse * httpRespo = (NSHTTPURLResponse *)response;
     NSLog(@"Response recieved, status: %@", [[httpRespo allHeaderFields] description]);
+    
 }
 
 - (void)connection:(NSURLConnection*) connection didReceiveData:(NSData *)data
@@ -91,6 +92,13 @@
     NSLog(@"Data recieved, %@", self.response);
 
     self.status = @"Response retrieved async";
+    
+    NSError * error;
+    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+
+    if (self.callFinished && responseString) {
+        self.callFinished(jsonObject);
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
