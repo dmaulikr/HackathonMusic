@@ -24,6 +24,7 @@
 		B000ABDD1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 in Resources */ = {isa = PBXBuildFile; fileRef = B000ABDB1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 */; };
 		B000ABE11CC2A50C00781D6A /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABE01CC2A50C00781D6A /* SettingsVC.m */; };
 		B000ABE51CC2BDC900781D6A /* HMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABE41CC2BDC900781D6A /* HMUser.m */; };
+		B000ABE71CC2D07B00781D6A /* pushbody.json in Resources */ = {isa = PBXBuildFile; fileRef = B000ABE61CC2D07B00781D6A /* pushbody.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		B000ABE01CC2A50C00781D6A /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
 		B000ABE31CC2BDC900781D6A /* HMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMUser.h; sourceTree = "<group>"; };
 		B000ABE41CC2BDC900781D6A /* HMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMUser.m; sourceTree = "<group>"; };
+		B000ABE61CC2D07B00781D6A /* pushbody.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pushbody.json; sourceTree = "<group>"; };
 		BD0BD7DE1A21073C4609B058 /* Pods-HackathonMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1FFA21F4D2044E233BEE47 /* Pods-HackathonMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 				8EF1C2041CC2784300C394AF /* Main.storyboard */,
 				B000ABD91CC2A1B600781D6A /* VisaAPI.h */,
 				B000ABDA1CC2A1B600781D6A /* VisaAPI.m */,
+				B000ABE61CC2D07B00781D6A /* pushbody.json */,
 				B000ABDB1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 */,
 				8EF1C2071CC2784300C394AF /* Assets.xcassets */,
 				8EF1C2091CC2784300C394AF /* LaunchScreen.storyboard */,
@@ -348,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B000ABE71CC2D07B00781D6A /* pushbody.json in Resources */,
 				8EF1C20B1CC2784300C394AF /* LaunchScreen.storyboard in Resources */,
 				B000ABDD1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 in Resources */,
 				8EF1C2081CC2784300C394AF /* Assets.xcassets in Resources */,

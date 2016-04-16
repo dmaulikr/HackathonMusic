@@ -35,8 +35,11 @@
 {
     self.status = @"Retrieving response async";
     self.response = @"";
+//        NSURL *requestUrl = [[NSURL alloc] initWithString:@"https://sandbox.api.visa.com/vdp/helloworld"];
     NSURL *requestUrl = [[NSURL alloc] initWithString:@"https://sandbox.api.visa.com/visadirect/fundstransfer/v1/pushfundstransactions"];
 //    NSURL *requestUrl = [[NSURL alloc] initWithString:@"https://sandbox.api.visa.com/visadirect/fundstransfer/v1/pullfundstransactions"];
+    
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
     request.HTTPMethod = @"POST";
     
@@ -52,11 +55,17 @@
     // Set your user login credentials
     [request setValue:[NSString stringWithFormat:@"Basic %@", authenticationValue] forHTTPHeaderField:@"Authorization"];
     
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"application/json, application/octet-stream" forHTTPHeaderField:@"Accept"];
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"pushbody" ofType:@"json"];
+    NSString *JSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
+    NSError *error =  nil;
+    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:[JSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
-    request.HTTPBody = [[self PushFundsBodyString] dataUsingEncoding:NSUTF8StringEncoding];
-
+    NSData *postdata = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:&error];
+    [request setHTTPBody:postdata];
+    
 //    request.HTTPBody = [[self pullFundsBodyString] dataUsingEncoding:NSUTF8StringEncoding];
     
     // Send your request asynchronously
@@ -150,7 +159,7 @@ OSStatus extractIdentityAndTrust(CFDataRef inP12data, SecIdentityRef *identity, 
 
 - (NSString *) PushFundsBodyString
 {
-    return @"{\
+    NSString * jsonstring = @"{\
     'acquirerCountryCode': '840',\
     'acquiringBin': '408999',\
     'amount': '124.05',\
@@ -162,8 +171,8 @@ OSStatus extractIdentityAndTrust(CFDataRef inP12data, SecIdentityRef *identity, 
     'state': 'CA',\
     'zipCode': '94404'\
     },\
-    'idCode': 'CA-IDCode-77765',\
-    'name': 'Visa Inc. USA-Foster City',\
+    'idCode': 'VMT200911026070',\
+    'name': 'Acceptor 1',\
     'terminalId': 'TID-9999'\
     },\
     'localTransactionDateTime': '2016-04-16T15:56:51',\
@@ -174,9 +183,9 @@ OSStatus extractIdentityAndTrust(CFDataRef inP12data, SecIdentityRef *identity, 
     'posConditionCode': '00'\
     },\
     'recipientName': 'rohan',\
-    'recipientPrimaryAccountNumber': '4957030420210496',\
-    'retrievalReferenceNumber': '412770451018',\
-    'senderAccountNumber': '4653459515756154',\
+    'recipientPrimaryAccountNumber': '4957030420210462',\
+    'retrievalReferenceNumber': '330000550000',\
+    'senderAccountNumber': '4957030420210454',\
     'senderAddress': '901 Metro Center Blvd',\
     'senderCity': 'Foster City',\
     'senderCountryCode': '124',\
@@ -184,15 +193,16 @@ OSStatus extractIdentityAndTrust(CFDataRef inP12data, SecIdentityRef *identity, 
     'senderReference': '',\
     'senderStateCode': 'CA',\
     'sourceOfFundsCode': '05',\
-    'systemsTraceAuditNumber': '451018',\
+    'systemsTraceAuditNumber': '451000',\
     'transactionCurrencyCode': 'USD',\
-    'transactionIdentifier': '381228649430015'\
+    'transactionIdentifier': '381228649430011'\
     }";
+    return [[jsonstring componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]] componentsJoinedByString:@""];
 }
 
 - (NSString *) pullFundsBodyString
 {
-   return [@"\
+    NSString * jsonstring = @"\
     {\
     'acquirerCountryCode': '840',\
     'acquiringBin': '408999',\
@@ -218,7 +228,9 @@ OSStatus extractIdentityAndTrust(CFDataRef inP12data, SecIdentityRef *identity, 
     'senderPrimaryAccountNumber': '4005520000011126',\
     'surcharge': '11.99',\
     'systemsTraceAuditNumber': '451001'\
-    }" stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    }";
+    return [[jsonstring componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]] componentsJoinedByString:@""];
+    
 }
 
 

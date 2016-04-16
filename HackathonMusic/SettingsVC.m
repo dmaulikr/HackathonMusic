@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
     
-    self.minCredits = [NSDecimalNumber decimalNumberWithString:@"10"];
+    self.minCredits = [NSDecimalNumber decimalNumberWithString:@"8"];
 }
 
 
