@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "VisaAPI.h"
 
 @interface HackathonMusicTests : XCTestCase
 
@@ -34,6 +35,12 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+
+- (void) testVisaAsync 
+{
+    
 }
 
 @end
