@@ -6,8 +6,9 @@
 //  Copyright © 2016 Everett Gilmore. All rights reserved.
 //
 
-#import "HMMusicDiscoveryVC.h"
 #import "YSLDraggableCardContainer.h"
+#import "HMMusicDiscoveryVC.h"
+#import "BottomContainerVC.h"
 #import "YSLCardView.h"
 #import "CardView.h"
 
@@ -17,6 +18,9 @@
 
 @property (nonatomic, strong) YSLDraggableCardContainer *container;
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
+@property (nonatomic, strong) NSMutableArray *songInfoArray;
+@property (nonatomic, strong) BottomContainerVC *bottomContainerVC;
+
 
 @end
 
@@ -35,6 +39,7 @@
     
     self.view.backgroundColor = RGB(235, 235, 235);
     
+    self.bottomContainerVC = (BottomContainerVC *)self.childViewControllers.lastObject;
     
     [self setupCardView];
     
@@ -42,13 +47,13 @@
 }
 
 -(void)setupCardView{
-    yOrigin = 136.0;
+    yOrigin = 80.0;
     _container = [[YSLDraggableCardContainer alloc]init];
     _container.frame = CGRectMake(0, yOrigin, self.view.frame.size.width, self.view.frame.size.width);
     _container.backgroundColor = [UIColor clearColor];
     _container.dataSource = self;
     _container.delegate = self;
-    _container.canDraggableDirection = YSLDraggableDirectionLeft | YSLDraggableDirectionRight | YSLDraggableDirectionUp;
+    _container.canDraggableDirection = YSLDraggableDirectionLeft | YSLDraggableDirectionRight;
     [self.view addSubview:_container];
     
     [self loadData];
@@ -60,12 +65,15 @@
 - (void)loadData
 {
     self.dataSourceArray = [NSMutableArray array];
+    self.songInfoArray = [NSMutableArray array];
     
-    for (int i = 0; i < 9; i++) {
+    for (int i = 0; i < 8; i++) {
         NSDictionary *dict = @{@"image" : [NSString stringWithFormat:@"coverArt%d",i + 1],
                                @"name" : @"HackathonMusic"};
         [self.dataSourceArray addObject:dict];
     }
+    
+    
 }
 
 
@@ -100,20 +108,23 @@
 #pragma mark -- YSLDraggableCardContainer Delegate
 - (void)cardContainerView:(YSLDraggableCardContainer *)cardContainerView didEndDraggingAtIndex:(NSInteger)index draggableView:(UIView *)draggableView draggableDirection:(YSLDraggableDirection)draggableDirection
 {
+    
+    
     if (draggableDirection == YSLDraggableDirectionLeft) {
         [cardContainerView movePositionWithDirection:draggableDirection
                                          isAutomatic:NO];
+        
+        [self.bottomContainerVC resetViews];
     }
     
     if (draggableDirection == YSLDraggableDirectionRight) {
         [cardContainerView movePositionWithDirection:draggableDirection
                                          isAutomatic:NO];
+        
+        [self.bottomContainerVC resetViews];
     }
     
-    if (draggableDirection == YSLDraggableDirectionUp) {
-        [cardContainerView movePositionWithDirection:draggableDirection
-                                         isAutomatic:NO];
-    }
+
 }
 
 - (void)cardContainderView:(YSLDraggableCardContainer *)cardContainderView updatePositionWithDraggableView:(UIView *)draggableView draggableDirection:(YSLDraggableDirection)draggableDirection widthRatio:(CGFloat)widthRatio heightRatio:(CGFloat)heightRatio
