@@ -166,12 +166,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9f-S6-o31">
-                                <rect key="frame" x="0.0" y="137" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="37" width="375" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Tng-DP-vVL"/>
+                                    <constraint firstAttribute="height" constant="130" id="Tng-DP-vVL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.75686274509803919" green="0.75686274509803919" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7E-Ke-W4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-596.5" y="-616"/>
+            <point key="canvasLocation" x="-596.5" y="-616.5"/>
         </scene>
     </scenes>
     <resources>
