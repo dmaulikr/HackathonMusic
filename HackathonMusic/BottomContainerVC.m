@@ -87,8 +87,9 @@
              
              viewSize = 60.0;
              CGFloat yPositionTop = 10;
+             CGFloat xPosition = self.view.frame.size.width/2 - viewSize/2 - viewSize*2 -10;
              
-             self.circleView1 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(10, yPositionTop, viewSize, viewSize)];
+             self.circleView1 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(xPosition, yPositionTop, viewSize, viewSize)];
              self.circleView1.delegate = self;
              [self.circleView1.iconImageView setImage:[UIImage imageNamed:@""]];
              self.circleView1.descriptionLabel.text = @"PV";
@@ -97,7 +98,7 @@
              [self.circleViewArray addObject:self.circleView1];
              
              
-             self.circleView2 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(90 , yPositionTop, viewSize, viewSize)];
+             self.circleView2 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(xPosition + 65 , yPositionTop, viewSize, viewSize)];
              self.circleView2.delegate = self;
              [self.circleView2.iconImageView setImage:[UIImage imageNamed:@""]];
              self.circleView2.descriptionLabel.text = @"SW";
@@ -105,7 +106,7 @@
              [self.view addSubview:self.circleView2];
              [self.circleViewArray addObject:self.circleView2];
              
-             self.circleView3 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(160 , yPositionTop, viewSize, viewSize)];
+             self.circleView3 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(xPosition + 65*2 , yPositionTop, viewSize, viewSize)];
              self.circleView3.delegate = self;
              [self.circleView3.iconImageView setImage:[UIImage imageNamed:@""]];
              self.circleView3.descriptionLabel.text = @"CA";
@@ -113,7 +114,7 @@
              [self.view addSubview:self.circleView3];
              [self.circleViewArray addObject:self.circleView3];
              
-             self.circleView4 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(230, yPositionTop, viewSize, viewSize)];
+             self.circleView4 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(xPosition + 65*3, yPositionTop, viewSize, viewSize)];
              self.circleView4.delegate = self;
              [self.circleView4.iconImageView setImage:[UIImage imageNamed:@""]];
               self.circleView4.descriptionLabel.text = @"ST";
@@ -121,7 +122,7 @@
              [self.view addSubview:self.circleView4];
              [self.circleViewArray addObject:self.circleView4];
              
-             self.circleView5 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(300, yPositionTop, viewSize, viewSize)];
+             self.circleView5 = [[SwipeableCircleView alloc] initWithFrame:CGRectMake(xPosition + 65*4, yPositionTop, viewSize, viewSize)];
              self.circleView5.delegate = self;
              [self.circleView5.iconImageView setImage:[UIImage imageNamed:@""]];
              self.circleView5.descriptionLabel.text = @"BE";
