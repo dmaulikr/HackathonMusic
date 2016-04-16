@@ -23,6 +23,7 @@
 		B000ABDC1CC2A1B600781D6A /* VisaAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABDA1CC2A1B600781D6A /* VisaAPI.m */; };
 		B000ABDD1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 in Resources */ = {isa = PBXBuildFile; fileRef = B000ABDB1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 */; };
 		B000ABE11CC2A50C00781D6A /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABE01CC2A50C00781D6A /* SettingsVC.m */; };
+		B000ABE51CC2BDC900781D6A /* HMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABE41CC2BDC900781D6A /* HMUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		B000ABDB1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = visavis_keyAndCertBundle.p12; sourceTree = "<group>"; };
 		B000ABDF1CC2A50C00781D6A /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
 		B000ABE01CC2A50C00781D6A /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
+		B000ABE31CC2BDC900781D6A /* HMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMUser.h; sourceTree = "<group>"; };
+		B000ABE41CC2BDC900781D6A /* HMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMUser.m; sourceTree = "<group>"; };
 		BD0BD7DE1A21073C4609B058 /* Pods-HackathonMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1FFA21F4D2044E233BEE47 /* Pods-HackathonMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +140,7 @@
 		8EF1C1FA1CC2784300C394AF /* HackathonMusic */ = {
 			isa = PBXGroup;
 			children = (
+				B000ABE21CC2BDA700781D6A /* Model */,
 				B000ABDE1CC2A4EF00781D6A /* Tab3 */,
 				8EF1C2321CC2813800C394AF /* 3rd Party */,
 				8EF1C22E1CC27F5500C394AF /* Tab1 */,
@@ -219,6 +223,15 @@
 				B000ABE01CC2A50C00781D6A /* SettingsVC.m */,
 			);
 			name = Tab3;
+			sourceTree = "<group>";
+		};
+		B000ABE21CC2BDA700781D6A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B000ABE31CC2BDC900781D6A /* HMUser.h */,
+				B000ABE41CC2BDC900781D6A /* HMUser.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F05BEDDBF7C30E4624033BBD /* Frameworks */ = {
@@ -420,6 +433,7 @@
 				8EF1C2311CC2807500C394AF /* HMMusicDiscoveryVC.m in Sources */,
 				8EF1C1FD1CC2784300C394AF /* main.m in Sources */,
 				8EF1C2401CC2872E00C394AF /* CardView.m in Sources */,
+				B000ABE51CC2BDC900781D6A /* HMUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
