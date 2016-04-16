@@ -11,6 +11,7 @@
 #import "BottomContainerVC.h"
 #import "YSLCardView.h"
 #import "CardView.h"
+#import "HMUser.h"
 
 #define RGB(r, g, b)	 [UIColor colorWithRed: (r) / 255.0 green: (g) / 255.0 blue: (b) / 255.0 alpha : 1]
 
@@ -38,6 +39,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = RGB(235, 235, 235);
+    [HMUser currentUser].credits = [NSDecimalNumber decimalNumberWithString:@"9"];
+
     
     self.bottomContainerVC = (BottomContainerVC *)self.childViewControllers.lastObject;
     
