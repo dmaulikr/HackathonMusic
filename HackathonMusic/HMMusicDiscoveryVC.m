@@ -38,7 +38,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = RGB(235, 235, 235);
+    self.view.backgroundColor = RGB(23, 23, 23);
     [HMUser currentUser].credits = [NSDecimalNumber decimalNumberWithString:@"9"];
 
     
@@ -169,6 +169,8 @@
     NSLog(@"++ index : %ld",(long)index);
 }
 
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+}
 
 
 @end
