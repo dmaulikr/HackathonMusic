@@ -35,10 +35,10 @@
 {
     self.status = @"Retrieving response async";
     self.response = @"";
-    
-    NSURL *requestUrl = [[NSURL alloc] initWithString:@"https://sandbox.api.visa.com/vdp/helloworld"];
+    NSURL *requestUrl = [[NSURL alloc] initWithString:@"https://sandbox.api.visa.com/visadirect/fundstransfer/v1/pushfundstransactions"];
+//    NSURL *requestUrl = [[NSURL alloc] initWithString:@"https://sandbox.api.visa.com/visadirect/fundstransfer/v1/pullfundstransactions"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestUrl cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
-    
+    request.HTTPMethod = @"POST";
     
     //username and password value
     NSString *username = @"6LSKH3ULLJOA41A7RCAY21NSxQpmnAI-MjtikZZQC8vN4FA7A";
@@ -47,10 +47,17 @@
     //HTTP Basic Authentication
     NSString *authenticationString = [NSString stringWithFormat:@"%@:%@", username, password];
     NSData *authenticationData = [authenticationString dataUsingEncoding:NSASCIIStringEncoding];
-    NSString *authenticationValue = [authenticationData base64Encoding];
+    NSString *authenticationValue = [authenticationData base64EncodedStringWithOptions:kNilOptions];
     
     // Set your user login credentials
     [request setValue:[NSString stringWithFormat:@"Basic %@", authenticationValue] forHTTPHeaderField:@"Authorization"];
+    
+    [request setValue:@"application/json, application/octet-stream" forHTTPHeaderField:@"Accept"];
+    
+    
+    request.HTTPBody = [[self PushFundsBodyString] dataUsingEncoding:NSUTF8StringEncoding];
+
+//    request.HTTPBody = [[self pullFundsBodyString] dataUsingEncoding:NSUTF8StringEncoding];
     
     // Send your request asynchronously
     
@@ -61,7 +68,8 @@
 
 - (void)connection:(NSURLConnection *) connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"Response recieved");
+    NSHTTPURLResponse * httpRespo = (NSHTTPURLResponse *)response;
+    NSLog(@"Response recieved, status: %@", [[httpRespo allHeaderFields] description]);
 }
 
 - (void)connection:(NSURLConnection*) connection didReceiveData:(NSData *)data
@@ -101,8 +109,8 @@
 
 - (void)connection:(NSURLConnection*) connection didFailWithError:(NSError *)error
 {
-    NSLog([NSString stringWithFormat:@"Did recieve error: %@", [error localizedDescription]]);
-    NSLog([NSString stringWithFormat:@"%@", [error userInfo]]);
+    NSLog(@"%@",[NSString stringWithFormat:@"Did recieve error: %@", [error localizedDescription]]);
+    NSLog(@"%@",  [NSString stringWithFormat:@"%@", [error userInfo]]);
 }
 
 - (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
@@ -138,6 +146,79 @@ OSStatus extractIdentityAndTrust(CFDataRef inP12data, SecIdentityRef *identity, 
     }
     
     return securityError;
+}
+
+- (NSString *) PushFundsBodyString
+{
+    return @"{\
+    'acquirerCountryCode': '840',\
+    'acquiringBin': '408999',\
+    'amount': '124.05',\
+    'businessApplicationId': 'AA',\
+    'cardAcceptor': {\
+    'address': {\
+    'country': 'USA',\
+    'county': 'San Mateo',\
+    'state': 'CA',\
+    'zipCode': '94404'\
+    },\
+    'idCode': 'CA-IDCode-77765',\
+    'name': 'Visa Inc. USA-Foster City',\
+    'terminalId': 'TID-9999'\
+    },\
+    'localTransactionDateTime': '2016-04-16T15:56:51',\
+    'merchantCategoryCode': '6012',\
+    'pointOfServiceData': {\
+    'motoECIIndicator': '0',\
+    'panEntryMode': '90',\
+    'posConditionCode': '00'\
+    },\
+    'recipientName': 'rohan',\
+    'recipientPrimaryAccountNumber': '4957030420210496',\
+    'retrievalReferenceNumber': '412770451018',\
+    'senderAccountNumber': '4653459515756154',\
+    'senderAddress': '901 Metro Center Blvd',\
+    'senderCity': 'Foster City',\
+    'senderCountryCode': '124',\
+    'senderName': 'Mohammed Qasim',\
+    'senderReference': '',\
+    'senderStateCode': 'CA',\
+    'sourceOfFundsCode': '05',\
+    'systemsTraceAuditNumber': '451018',\
+    'transactionCurrencyCode': 'USD',\
+    'transactionIdentifier': '381228649430015'\
+    }";
+}
+
+- (NSString *) pullFundsBodyString
+{
+   return [@"\
+    {\
+    'acquirerCountryCode': '840',\
+    'acquiringBin': '408999',\
+    'amount': '124.02',\
+    'businessApplicationId': 'AA',\
+    'cardAcceptor': {\
+    'address': {\
+    'country': 'USA',\
+    'county': 'San Mateo',\
+    'state': 'CA',\
+    'zipCode': '94404'\
+    },\
+    'idCode': 'VMT200911026070',\
+    'name': 'Acceptor 1',\
+    'terminalId': '365539'\
+    },\
+    'cavv': '0000010926000071934977253000000000000000',\
+    'foreignExchangeFeeTransaction': '11.99',\
+    'localTransactionDateTime': '2016-04-16T17:43:02',\
+    'retrievalReferenceNumber': '330000550000',\
+    'senderCardExpiryDate': '2015-10',\
+    'senderCurrencyCode': 'USD',\
+    'senderPrimaryAccountNumber': '4005520000011126',\
+    'surcharge': '11.99',\
+    'systemsTraceAuditNumber': '451001'\
+    }" stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
 
