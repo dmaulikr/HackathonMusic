@@ -15,6 +15,8 @@
 		8EF1C20B1CC2784300C394AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF1C2091CC2784300C394AF /* LaunchScreen.storyboard */; };
 		8EF1C2161CC2784300C394AF /* HackathonMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF1C2151CC2784300C394AF /* HackathonMusicTests.m */; };
 		8EF1C2211CC2784300C394AF /* HackathonMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF1C2201CC2784300C394AF /* HackathonMusicUITests.m */; };
+		B000ABD61CC2959800781D6A /* VisaAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABD51CC2959800781D6A /* VisaAPI.m */; };
+		B000ABD81CC295A700781D6A /* visavis_keyAndCertBundle.p12 in Resources */ = {isa = PBXBuildFile; fileRef = B000ABD71CC295A700781D6A /* visavis_keyAndCertBundle.p12 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		8EF1C21C1CC2784300C394AF /* HackathonMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackathonMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF1C2201CC2784300C394AF /* HackathonMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackathonMusicUITests.m; sourceTree = "<group>"; };
 		8EF1C2221CC2784300C394AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B000ABD41CC2959800781D6A /* VisaAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisaAPI.h; sourceTree = "<group>"; };
+		B000ABD51CC2959800781D6A /* VisaAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisaAPI.m; sourceTree = "<group>"; };
+		B000ABD71CC295A700781D6A /* visavis_keyAndCertBundle.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = visavis_keyAndCertBundle.p12; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +114,10 @@
 				8EF1C2071CC2784300C394AF /* Assets.xcassets */,
 				8EF1C2091CC2784300C394AF /* LaunchScreen.storyboard */,
 				8EF1C20C1CC2784300C394AF /* Info.plist */,
+				B000ABD71CC295A700781D6A /* visavis_keyAndCertBundle.p12 */,
 				8EF1C1FB1CC2784300C394AF /* Supporting Files */,
+				B000ABD41CC2959800781D6A /* VisaAPI.h */,
+				B000ABD51CC2959800781D6A /* VisaAPI.m */,
 			);
 			path = HackathonMusic;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EF1C20B1CC2784300C394AF /* LaunchScreen.storyboard in Resources */,
+				B000ABD81CC295A700781D6A /* visavis_keyAndCertBundle.p12 in Resources */,
 				8EF1C2081CC2784300C394AF /* Assets.xcassets in Resources */,
 				8EF1C2061CC2784300C394AF /* Main.storyboard in Resources */,
 			);
@@ -271,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EF1C2031CC2784300C394AF /* ViewController.m in Sources */,
+				B000ABD61CC2959800781D6A /* VisaAPI.m in Sources */,
 				8EF1C2001CC2784300C394AF /* AppDelegate.m in Sources */,
 				8EF1C1FD1CC2784300C394AF /* main.m in Sources */,
 			);
@@ -414,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HackathonMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathonmusic.HackathonMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HackathonMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathonmusic.HackathonMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +508,7 @@
 				8EF1C2271CC2784300C394AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EF1C2281CC2784300C394AF /* Build configuration list for PBXNativeTarget "HackathonMusicTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +517,7 @@
 				8EF1C22A1CC2784300C394AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EF1C22B1CC2784300C394AF /* Build configuration list for PBXNativeTarget "HackathonMusicUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +526,7 @@
 				8EF1C22D1CC2784300C394AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
