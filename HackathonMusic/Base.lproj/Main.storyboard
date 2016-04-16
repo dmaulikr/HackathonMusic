@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Item 2-->
@@ -36,15 +38,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nS8-RZ-7Xa">
-                                <rect key="frame" x="261" y="238" width="79" height="30"/>
-                                <state key="normal" title="Trigger Call"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdX-q7-Njn">
+                                <rect key="frame" x="180" y="485" width="240" height="36.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zdX-q7-Njn" secondAttribute="height" multiplier="211:32" id="RQq-9h-TfY"/>
+                                    <constraint firstAttribute="height" constant="64" id="TGB-OW-Gg5"/>
+                                </constraints>
+                                <state key="normal" image="logo"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TGB-OW-Gg5"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="TriggerAsyncCall:" destination="9hP-32-Chh" eventType="touchUpInside" id="qgK-TY-N2Q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xa-Ig-N3v">
+                                <rect key="frame" x="0.0" y="126" width="600" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYx-Fj-mHv">
+                                <rect key="frame" x="0.0" y="174" width="600" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nS8-RZ-7Xa">
+                                <rect key="frame" x="180" y="424" width="240" height="38"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <state key="normal" title="CASH IN">
+                                    <color key="titleColor" red="0.042192676649999997" green="0.092153317969999995" blue="0.31581182070000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="TriggerAsyncCall:" destination="9hP-32-Chh" eventType="touchUpInside" id="QAL-jI-knv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zYx-Fj-mHv" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="1aR-rt-xJI"/>
+                            <constraint firstItem="zdX-q7-Njn" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="5IB-D2-Whq"/>
+                            <constraint firstItem="nS8-RZ-7Xa" firstAttribute="width" secondItem="zdX-q7-Njn" secondAttribute="width" id="Bkz-dI-86X"/>
+                            <constraint firstItem="zYx-Fj-mHv" firstAttribute="width" secondItem="GMh-bO-lIa" secondAttribute="width" id="QKP-MW-qVH"/>
+                            <constraint firstItem="zYx-Fj-mHv" firstAttribute="top" secondItem="4Xa-Ig-N3v" secondAttribute="bottom" constant="22.5" id="QZB-uY-cCS"/>
+                            <constraint firstItem="brd-lY-czF" firstAttribute="top" secondItem="zdX-q7-Njn" secondAttribute="bottom" constant="29" id="Qsl-d1-lPB"/>
+                            <constraint firstItem="4Xa-Ig-N3v" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="Uv3-iH-LIS"/>
+                            <constraint firstItem="zdX-q7-Njn" firstAttribute="width" secondItem="GMh-bO-lIa" secondAttribute="width" multiplier="0.4" id="jg9-Pv-IaU"/>
+                            <constraint firstItem="zdX-q7-Njn" firstAttribute="top" secondItem="nS8-RZ-7Xa" secondAttribute="bottom" constant="23.5" id="nih-Tg-PWz"/>
+                            <constraint firstItem="4Xa-Ig-N3v" firstAttribute="width" secondItem="GMh-bO-lIa" secondAttribute="width" id="t9e-In-RXS"/>
+                            <constraint firstItem="4Xa-Ig-N3v" firstAttribute="top" secondItem="sCu-Dq-116" secondAttribute="bottom" constant="62" id="tjf-Hl-0CS"/>
+                            <constraint firstItem="nS8-RZ-7Xa" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="xXC-j3-hnZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="qmb-Sr-Cuu"/>
                 </viewController>
@@ -108,4 +155,7 @@
             <point key="canvasLocation" x="-1546" y="-410"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="422" height="64"/>
+    </resources>
 </document>

@@ -8,17 +8,34 @@
 
 #import "SettingsVC.h"
 #import "VisaAPI.h"
+#import "HMUser.h"
+
+@interface SettingsVC ()
+
+@property (strong, nonatomic) NSDecimalNumber * minCredits;
+
+@end
 
 @implementation SettingsVC
 
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.minCredits = [NSDecimalNumber decimalNumberWithString:@"10"];
 }
 
 
 - (IBAction)TriggerAsyncCall:(id)sender {
-    [VisaAPI triggerCall];
+    NSComparisonResult comparison =[[HMUser currentUser].credits compare:self.minCredits];
+    if (comparison == NSOrderedDescending) {
+        [VisaAPI triggerCall];
+    } else {
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Not Yet" message:@"You don't have enough credits to cash in yet" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 @end

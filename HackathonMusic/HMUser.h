@@ -13,6 +13,6 @@
 + (HMUser *) currentUser;
 
 @property (strong, nonatomic) NSString * name;
-@property (nonatomic) float credits;
+@property (nonatomic) NSDecimalNumber * credits;
 
 @end
