@@ -53,9 +53,9 @@
         NSURL * url = [[NSBundle mainBundle] URLForResource:song.musicFileName
                                               withExtension:@"mp3"];
         
-        AVPlayerItem * item = [[AVPlayerItem alloc] initWithURL:url];
-        [self.player insertItem:item
-                      afterItem:nil];
+//        AVPlayerItem * item = [[AVPlayerItem alloc] initWithURL:url];
+//        [self.player insertItem:item
+//                      afterItem:nil];
     }
 
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7C01B0C1846BDF8D6014A40C /* libPods-HackathonMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADA1E8B9954796F42937917 /* libPods-HackathonMusic.a */; };
+		8E08379A1CC2F5DE0047830C /* SwipeableCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0837991CC2F5DE0047830C /* SwipeableCircleView.m */; };
+		8E08379D1CC2F5EE0047830C /* BottomContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E08379C1CC2F5EE0047830C /* BottomContainerVC.m */; };
 		8EF1C1FD1CC2784300C394AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF1C1FC1CC2784300C394AF /* main.m */; };
 		8EF1C2001CC2784300C394AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF1C1FF1CC2784300C394AF /* AppDelegate.m */; };
 		8EF1C2031CC2784300C394AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF1C2021CC2784300C394AF /* ViewController.m */; };
@@ -29,7 +31,6 @@
 		B000ABED1CC2D67300781D6A /* HMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABEC1CC2D67300781D6A /* HMPlayer.m */; };
 		B000ABF01CC2E09200781D6A /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = B000ABEF1CC2E09200781D6A /* Song.m */; };
 		B000ABF21CC2E8C100781D6A /* songs.json in Resources */ = {isa = PBXBuildFile; fileRef = B000ABF11CC2E8C100781D6A /* songs.json */; };
-		B000ABF51CC2E97E00781D6A /* rooster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B000ABF41CC2E97E00781D6A /* rooster.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		6ADA1E8B9954796F42937917 /* libPods-HackathonMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackathonMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E0837981CC2F5DE0047830C /* SwipeableCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeableCircleView.h; sourceTree = "<group>"; };
+		8E0837991CC2F5DE0047830C /* SwipeableCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeableCircleView.m; sourceTree = "<group>"; };
+		8E08379B1CC2F5EE0047830C /* BottomContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomContainerVC.h; sourceTree = "<group>"; };
+		8E08379C1CC2F5EE0047830C /* BottomContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomContainerVC.m; sourceTree = "<group>"; };
 		8EF1C1F81CC2784300C394AF /* HackathonMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackathonMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF1C1FC1CC2784300C394AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8EF1C1FE1CC2784300C394AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,7 +94,6 @@
 		B000ABEE1CC2E09200781D6A /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		B000ABEF1CC2E09200781D6A /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		B000ABF11CC2E8C100781D6A /* songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
-		B000ABF41CC2E97E00781D6A /* rooster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rooster.mp3; path = ../../../../Developer/of_v0.9.2_osx_release/examples/sound/soundPlayerFFTExample/bin/data/sounds/rooster.mp3; sourceTree = "<group>"; };
 		BD0BD7DE1A21073C4609B058 /* Pods-HackathonMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1FFA21F4D2044E233BEE47 /* Pods-HackathonMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +212,10 @@
 		8EF1C22E1CC27F5500C394AF /* Tab1 */ = {
 			isa = PBXGroup;
 			children = (
+				8E08379B1CC2F5EE0047830C /* BottomContainerVC.h */,
+				8E08379C1CC2F5EE0047830C /* BottomContainerVC.m */,
+				8E0837981CC2F5DE0047830C /* SwipeableCircleView.h */,
+				8E0837991CC2F5DE0047830C /* SwipeableCircleView.m */,
 				8EF1C22F1CC2807500C394AF /* HMMusicDiscoveryVC.h */,
 				8EF1C2301CC2807500C394AF /* HMMusicDiscoveryVC.m */,
 			);
@@ -267,7 +275,6 @@
 		B000ABF31CC2E96B00781D6A /* MusicFiles */ = {
 			isa = PBXGroup;
 			children = (
-				B000ABF41CC2E97E00781D6A /* rooster.mp3 */,
 			);
 			name = MusicFiles;
 			sourceTree = "<group>";
@@ -393,7 +400,6 @@
 				B000ABDD1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 in Resources */,
 				8EF1C2081CC2784300C394AF /* Assets.xcassets in Resources */,
 				8EF1C2061CC2784300C394AF /* Main.storyboard in Resources */,
-				B000ABF51CC2E97E00781D6A /* rooster.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,8 +476,10 @@
 				8EF1C2391CC2815100C394AF /* YSLDraggableCardContainer.m in Sources */,
 				B000ABDC1CC2A1B600781D6A /* VisaAPI.m in Sources */,
 				8EF1C2381CC2815100C394AF /* YSLCardView.m in Sources */,
+				8E08379A1CC2F5DE0047830C /* SwipeableCircleView.m in Sources */,
 				8EF1C2031CC2784300C394AF /* ViewController.m in Sources */,
 				8EF1C2001CC2784300C394AF /* AppDelegate.m in Sources */,
+				8E08379D1CC2F5EE0047830C /* BottomContainerVC.m in Sources */,
 				B000ABE11CC2A50C00781D6A /* SettingsVC.m in Sources */,
 				8EF1C2311CC2807500C394AF /* HMMusicDiscoveryVC.m in Sources */,
 				8EF1C1FD1CC2784300C394AF /* main.m in Sources */,
