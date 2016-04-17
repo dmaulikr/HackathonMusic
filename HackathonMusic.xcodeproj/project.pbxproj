@@ -42,6 +42,7 @@
 		B000AC091CC3124D00781D6A /* YoungThugDigitsMeekMill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B000ABFF1CC3124D00781D6A /* YoungThugDigitsMeekMill.mp3 */; };
 		B000AC0B1CC3141500781D6A /* goldplay.json in Resources */ = {isa = PBXBuildFile; fileRef = B000AC0A1CC3141500781D6A /* goldplay.json */; };
 		B04D7C141CC3B77800D459D9 /* COINSLOT DROP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B04D7C131CC3B77800D459D9 /* COINSLOT DROP.mp3 */; };
+		B04D7C151CC3C09E00D459D9 /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B04D7C121CC3B5DA00D459D9 /* Gotham-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -436,6 +437,7 @@
 				B000AC001CC3124D00781D6A /* AlunaGeorgeIRemember.mp3 in Resources */,
 				B000ABE71CC2D07B00781D6A /* pushbody.json in Resources */,
 				8EF1C20B1CC2784300C394AF /* LaunchScreen.storyboard in Resources */,
+				B04D7C151CC3C09E00D459D9 /* Gotham-Bold.otf in Resources */,
 				B000AC091CC3124D00781D6A /* YoungThugDigitsMeekMill.mp3 in Resources */,
 				B000AC081CC3124D00781D6A /* WillIAMPiaMiaGirlsBoys.mp3 in Resources */,
 				B000AC041CC3124D00781D6A /* JahkoyallofYOU.mp3 in Resources */,

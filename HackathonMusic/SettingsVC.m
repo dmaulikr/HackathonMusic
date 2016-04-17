@@ -23,6 +23,7 @@
 @implementation SettingsVC
 {
     AVAudioPlayer * audioPlayer;
+    NSTimer * timer;
 }
 
 - (void) viewDidLoad
@@ -83,11 +84,11 @@
 - (void) dropCredit
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:0.001
-                                                           target:self
-                                                         selector:@selector(decreaseCredit:)
-                                                         userInfo:nil
-                                                          repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.0001
+                                                   target:self
+                                                 selector:@selector(decreaseCredit:)
+                                                 userInfo:nil
+                                                  repeats:YES];
     });
 
     
@@ -99,7 +100,7 @@
         if  ([HMUser currentUser].credits.floatValue <= 0.0f) {
             [timer invalidate];
         } else {
-            NSDecimalNumber * oneCent = [NSDecimalNumber decimalNumberWithString:@"0.01"];
+            NSDecimalNumber * oneCent = [NSDecimalNumber decimalNumberWithString:@"0.02"];
             [HMUser currentUser].credits =  [[HMUser currentUser].credits decimalNumberBySubtracting:oneCent];
             [self updateCredits];
         }
