@@ -85,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-b1-mMv">
-                                <rect key="frame" x="20" y="28" width="76" height="30"/>
+                                <rect key="frame" x="149.5" y="28" width="76" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ITM-wH-Ew2"/>
                                     <constraint firstAttribute="width" constant="76" id="O7q-F0-bx5"/>
@@ -109,10 +109,10 @@
                             <constraint firstItem="pJD-4R-I4j" firstAttribute="top" secondItem="gfT-MR-Ko3" secondAttribute="bottom" constant="-15" id="KtG-HU-6c6"/>
                             <constraint firstItem="brd-lY-czF" firstAttribute="top" secondItem="TBR-Ju-o4t" secondAttribute="bottom" constant="32" id="Lt9-6q-4pZ"/>
                             <constraint firstItem="Pfd-b1-mMv" firstAttribute="top" secondItem="sCu-Dq-116" secondAttribute="bottom" constant="8" id="Mgs-HZ-qWW"/>
-                            <constraint firstItem="Pfd-b1-mMv" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" constant="-129.5" id="P8L-tx-fmq"/>
                             <constraint firstItem="brd-lY-czF" firstAttribute="top" secondItem="eRT-3d-npY" secondAttribute="bottom" constant="103" id="Pky-4q-gRU"/>
                             <constraint firstItem="TBR-Ju-o4t" firstAttribute="width" secondItem="GMh-bO-lIa" secondAttribute="width" multiplier="0.7" id="QV6-C0-I2t"/>
                             <constraint firstItem="gfT-MR-Ko3" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="RSX-pr-2Br"/>
+                            <constraint firstItem="Pfd-b1-mMv" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="ZpA-vH-dyD"/>
                             <constraint firstItem="eRT-3d-npY" firstAttribute="top" secondItem="RSE-ya-3B9" secondAttribute="bottom" constant="8" id="aKP-sI-cfi"/>
                             <constraint firstItem="RSE-ya-3B9" firstAttribute="width" secondItem="GMh-bO-lIa" secondAttribute="width" multiplier="0.8" id="coN-9n-1VT"/>
                             <constraint firstItem="gfT-MR-Ko3" firstAttribute="top" secondItem="sCu-Dq-116" secondAttribute="bottom" constant="31" id="fiQ-s1-znx"/>
@@ -123,9 +123,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="hht-H2-vgo"/>
                                 <exclude reference="EPm-uA-vzp"/>
                                 <exclude reference="KtG-HU-6c6"/>
+                                <exclude reference="hht-H2-vgo"/>
                                 <exclude reference="KZN-GU-GOF"/>
                             </mask>
                         </variation>
