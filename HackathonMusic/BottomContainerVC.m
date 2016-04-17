@@ -36,7 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.descriptionsArray = [NSArray arrayWithObjects:@"Production Value", @"item 2", @"item 3", @"item 4", @"item 5", nil];
+    self.descriptionsArray = [NSArray arrayWithObjects:@"Production Value", @"Song Writing", @"Beat", @"Cover Art", @"Replay Value", @"Would you recommend this song?", nil];
     
     
     
