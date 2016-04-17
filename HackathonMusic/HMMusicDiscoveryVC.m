@@ -19,8 +19,7 @@
 @interface HMMusicDiscoveryVC ()<YSLDraggableCardContainerDelegate, YSLDraggableCardContainerDataSource>
 
 @property (nonatomic, strong) YSLDraggableCardContainer *container;
-@property (nonatomic, strong) NSMutableArray *dataSourceArray;
-@property (nonatomic, strong) NSMutableArray *songInfoArray;
+@property (nonatomic, strong) NSArray *dataSourceArray;
 @property (nonatomic, strong) BottomContainerVC *bottomContainerVC;
 @property (nonatomic) NSInteger progress;
 
@@ -70,37 +69,28 @@
     _container.canDraggableDirection = YSLDraggableDirectionLeft | YSLDraggableDirectionRight;
     [self.view addSubview:_container];
     
-    [self loadData];
     
     [_container reloadCardContainer];
 
 }
 
-- (void)loadData
+- (NSArray *) dataSourceArray
 {
-    self.dataSourceArray = [NSMutableArray array];
-    self.songInfoArray = [NSMutableArray array];
-    
-    for (int i = 0; i < 8; i++) {
-        NSDictionary *dict = @{@"image" : [NSString stringWithFormat:@"coverArt%d",i + 1],
-                               @"name" : @"HackathonMusic"};
-        [self.dataSourceArray addObject:dict];
-    }
-    
-    
+    return [HMPlayer shared].songs;
 }
-
 
 #pragma mark -- YSLDraggableCardContainer DataSource
 - (UIView *)cardContainerViewNextViewWithIndex:(NSInteger)index
 {
-    NSDictionary *dict = self.dataSourceArray[index];
     CardView *view = [[CardView alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 20, self.view.frame.size.width - 20)];
     view.backgroundColor = [UIColor clearColor];
-    view.imageView.image = [UIImage imageNamed:dict[@"image"]];
+    
+    Song * song = self.dataSourceArray[index];
+    
+    view.imageView.image = [UIImage imageNamed:song.artworkFilename];
    
-    view.artistLabel.text = [[NSString stringWithFormat:@"Anna of the north"] uppercaseString];
-    view.titleLabel.text = [[NSString stringWithFormat:@"The dreamer (feki remix)"] uppercaseString];
+    view.artistLabel.text = [song.artist uppercaseString];
+    view.titleLabel.text = [song.title uppercaseString];
     
     if (index == 0){
         view.artistLabel.hidden = NO;
