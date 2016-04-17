@@ -33,6 +33,11 @@
     [super viewWillAppear:animated];
     self.UsernameLabel.text = [HMUser currentUser].name;
     
+    [self updateCredits];
+}
+
+- (void) updateCredits
+{
     NSNumberFormatter * nf = [[NSNumberFormatter alloc] init];
     [nf setMinimumFractionDigits:2];
     [nf setMaximumFractionDigits:2];
@@ -45,8 +50,10 @@
     NSComparisonResult comparison =[[HMUser currentUser].credits compare:self.minCredits];
     if (comparison == NSOrderedDescending) {
         [VisaAPI shared].callFinished = ^ void (NSDictionary * response) {
+            [HMUser currentUser].credits =  [NSDecimalNumber decimalNumberWithString:@"0"];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.ResponseLabel.text = response.description;
+                [self updateCredits];
             });
         };
         [VisaAPI triggerCall];

@@ -16,7 +16,9 @@
 
 #define RGB(r, g, b)	 [UIColor colorWithRed: (r) / 255.0 green: (g) / 255.0 blue: (b) / 255.0 alpha : 1]
 
-@interface HMMusicDiscoveryVC ()<YSLDraggableCardContainerDelegate, YSLDraggableCardContainerDataSource>
+const float songValue = 0.1;
+
+@interface HMMusicDiscoveryVC ()<YSLDraggableCardContainerDelegate, YSLDraggableCardContainerDataSource, BottomContainerDelegate>
 
 @property (nonatomic, strong) YSLDraggableCardContainer *container;
 @property (nonatomic, strong) NSArray *dataSourceArray;
@@ -41,15 +43,26 @@
     self.view.backgroundColor = RGB(23, 23, 23);
     
     self.bottomContainerVC = (BottomContainerVC *)self.childViewControllers.lastObject;
+    self.bottomContainerVC.delegate = self;
     
     [self setupCardView];
     
-
+    [HMPlayer shared].everySecond = ^void(CMTime time)  {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.progress += 1;
+        });
+    };
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self updateCredit];
+}
+
+- (void) updateCredit
+{
     NSNumberFormatter * nf = [[NSNumberFormatter alloc] init];
     [nf setMinimumFractionDigits:2];
     [nf setMaximumFractionDigits:2];
@@ -59,14 +72,22 @@
     [self.UserNameCreditsButton setTitle:str forState:UIControlStateNormal];
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [[HMPlayer shared] play];
+}
+
+
+
 -(void)setupCardView{
     yOrigin = 80.0;
     _container = [[YSLDraggableCardContainer alloc]init];
     _container.frame = CGRectMake(0, yOrigin, self.view.frame.size.width, self.view.frame.size.width);
     _container.backgroundColor = [UIColor clearColor];
     _container.dataSource = self;
-    _container.delegate = self;
     _container.canDraggableDirection = YSLDraggableDirectionLeft | YSLDraggableDirectionRight;
+    _container.delegate = self;
     [self.view addSubview:_container];
     
     
@@ -128,7 +149,9 @@
         [self.bottomContainerVC resetViews];
     }
     
-
+    [[HMPlayer shared] skip];
+    [self convertProgressToCredit];
+    
 }
 
 - (void)cardContainderView:(YSLDraggableCardContainer *)cardContainderView updatePositionWithDraggableView:(UIView *)draggableView draggableDirection:(YSLDraggableDirection)draggableDirection widthRatio:(CGFloat)widthRatio heightRatio:(CGFloat)heightRatio
@@ -160,17 +183,29 @@
 
 - (void)cardContainerViewDidCompleteAll:(YSLDraggableCardContainer *)container;
 {
+    [[HMPlayer shared]pause];
+    [[HMPlayer shared]loadTracks];
+    [[HMPlayer shared]play];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [container reloadCardContainer];
     });
+    
 }
 
 - (void)cardContainerView:(YSLDraggableCardContainer *)cardContainerView didSelectAtIndex:(NSInteger)index draggableView:(UIView *)draggableView
 {
+    [[HMPlayer shared] togglePlay];
     NSLog(@"++ index : %ld",(long)index);
 }
 
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+}
+
+- (void) convertProgressToCredit
+{
+    [HMUser currentUser].credits = [[HMUser currentUser].credits decimalNumberByAdding:[NSDecimalNumber decimalNumberWithMantissa:songValue * self.progress exponent:-2 isNegative:NO]];
+    [self updateCredit];
+    self.progress = 0;
 }
 
 - (void) setProgress:(NSInteger)progress
@@ -181,6 +216,15 @@
         progress = 0;
     }
     _progress = progress;
+    NSString * progressString = [NSString stringWithFormat:@"%ld",(long)progress];
+    [self.percentage setTitle:progressString forState:UIControlStateNormal];
     
 }
+
+- (void) didSwipeCircleView:(SwipeableCircleView *)circleView
+{
+    self.progress += 10;
+}
+
+
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "BottomContainerVC.h"
-#import "SwipeableCircleView.h"
 
 @interface BottomContainerVC ()<SwipeableCircleViewDelegate>
 
@@ -159,21 +158,22 @@
 -(void) tappedOnView:(SwipeableCircleView *)swipeableView{
     
     self.descriptionLabel.text = swipeableView.descriptionTitle;
-    
+    [self.delegate didSwipeCircleView:swipeableView];
 }
 
 -(void) leftSwipedOnView: (SwipeableCircleView *)swipeableView{
     
     NSString *direction = @"Left";
     [self actionsOnSwipe:swipeableView withDirection:direction];
-    
+    [self.delegate didSwipeCircleView:swipeableView];
 }
 
 -(void) rightSwipedOnView: (SwipeableCircleView *)swipeableView{
     
     NSString *direction = @"Right";
     [self actionsOnSwipe:swipeableView withDirection:direction];
-    
+    [self.delegate didSwipeCircleView:swipeableView];
+
 }
 
 -(void) actionsOnSwipe: (SwipeableCircleView *)view withDirection:(NSString *)direction {
