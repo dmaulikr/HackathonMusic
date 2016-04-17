@@ -45,16 +45,16 @@
     _artistLabel = [[MarqueeLabel alloc]init];
     _artistLabel.backgroundColor = [UIColor clearColor];
     _artistLabel.frame = CGRectMake(0, 0, self.frame.size.width, 30);
-    _artistLabel.font = [UIFont fontWithName:@"Helvetica Neue Bold" size:14];
-    _artistLabel.textColor = [UIColor blackColor];
+    _artistLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14];
+    _artistLabel.textColor = [UIColor colorWithRed:0.655 green:0.565 blue:0.333 alpha:1.000]; //[UIColor colorWithRed:193.0/255.0 green:193.0/255.0 blue:193.0/255.0 alpha:1.0];
     _artistLabel.marqueeType = MLContinuous;
     [self addSubview:_artistLabel];
     
     _titleLabel = [[MarqueeLabel alloc]init];
     _titleLabel.backgroundColor = [UIColor clearColor];
     _titleLabel.frame = CGRectMake(0, 15, self.frame.size.width, 30);
-    _titleLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:14];
-    _titleLabel.textColor = [UIColor blackColor];
+    _titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:14];
+    _titleLabel.textColor = [UIColor whiteColor]; //[UIColor colorWithRed:193.0/255.0 green:193.0/255.0 blue:193.0/255.0 alpha:1.0];
     _titleLabel.marqueeType = MLContinuous;
     [self addSubview:_titleLabel];
 

@@ -21,7 +21,7 @@
 
 - (void)initialize
 {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor clearColor];
     self.layer.cornerRadius = self.frame.size.width/2;
     self.clipsToBounds = YES;
     
