@@ -12,6 +12,7 @@
 #import "YSLCardView.h"
 #import "CardView.h"
 #import "HMUser.h"
+#import "HMPlayer.h"
 
 #define RGB(r, g, b)	 [UIColor colorWithRed: (r) / 255.0 green: (g) / 255.0 blue: (b) / 255.0 alpha : 1]
 
