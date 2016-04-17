@@ -36,16 +36,6 @@
                                     <action selector="TriggerAsyncCall:" destination="9hP-32-Chh" eventType="touchUpInside" id="f3z-Mj-Ehd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRT-3d-npY">
-                                <rect key="frame" x="134" y="471" width="107" height="38"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
-                                <state key="normal" title="CASH IN">
-                                    <color key="titleColor" red="0.042192676649999997" green="0.092153317969999995" blue="0.31581182070000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="TriggerAsyncCall:" destination="9hP-32-Chh" eventType="touchUpInside" id="x9q-Xt-wzc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREDITS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJD-4R-I4j">
                                 <rect key="frame" x="149" y="151" width="76" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
@@ -62,7 +52,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-ya-3B9">
-                                <rect key="frame" x="37.5" y="189" width="300" height="200"/>
+                                <rect key="frame" x="37" y="189" width="300" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="zfC-wT-71W"/>
                                 </constraints>
@@ -70,6 +60,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRT-3d-npY">
+                                <rect key="frame" x="134" y="409" width="107" height="149"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <state key="normal" title="CASH IN">
+                                    <color key="titleColor" red="0.042192676649999997" green="0.092153317969999995" blue="0.31581182070000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="TriggerAsyncCall:" destination="9hP-32-Chh" eventType="touchUpInside" id="x9q-Xt-wzc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

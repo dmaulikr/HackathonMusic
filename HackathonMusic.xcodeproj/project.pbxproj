@@ -114,6 +114,7 @@
 		B000ABFE1CC3124D00781D6A /* WillIAMPiaMiaGirlsBoys.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WillIAMPiaMiaGirlsBoys.mp3; sourceTree = "<group>"; };
 		B000ABFF1CC3124D00781D6A /* YoungThugDigitsMeekMill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = YoungThugDigitsMeekMill.mp3; sourceTree = "<group>"; };
 		B000AC0A1CC3141500781D6A /* goldplay.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = goldplay.json; sourceTree = "<group>"; };
+		B04D7C121CC3B5DA00D459D9 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
 		BD0BD7DE1A21073C4609B058 /* Pods-HackathonMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1FFA21F4D2044E233BEE47 /* Pods-HackathonMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +193,7 @@
 				8EF1C2041CC2784300C394AF /* Main.storyboard */,
 				B000ABD91CC2A1B600781D6A /* VisaAPI.h */,
 				B000ABDA1CC2A1B600781D6A /* VisaAPI.m */,
+				B04D7C121CC3B5DA00D459D9 /* Gotham-Bold.otf */,
 				B000AC0A1CC3141500781D6A /* goldplay.json */,
 				B000ABE61CC2D07B00781D6A /* pushbody.json */,
 				B000ABDB1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 */,
@@ -388,6 +390,7 @@
 				TargetAttributes = {
 					8EF1C1F71CC2784300C394AF = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = DTK4H4493M;
 					};
 					8EF1C2101CC2784300C394AF = {
 						CreatedOnToolsVersion = 7.3;
@@ -667,10 +670,12 @@
 			baseConfigurationReference = BD0BD7DE1A21073C4609B058 /* Pods-HackathonMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HackathonMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathonmusic.HackathonMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Emerge16.BelieveIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -679,10 +684,12 @@
 			baseConfigurationReference = CF1FFA21F4D2044E233BEE47 /* Pods-HackathonMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HackathonMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathonmusic.HackathonMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Emerge16.BelieveIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
