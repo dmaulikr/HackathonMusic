@@ -54,12 +54,12 @@
     NSComparisonResult comparison =[[HMUser currentUser].credits compare:self.minCredits];
     if (comparison == NSOrderedDescending) {
         [VisaAPI shared].callFinished = ^ void (NSDictionary * response) {
-            [HMUser currentUser].credits =  [NSDecimalNumber decimalNumberWithString:@"0"];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.ResponseLabel.text = response.description;
                 [self playSound];
-                [self updateCredits];
-                
+            });
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self dropCredit];
             });
         };
         [VisaAPI triggerCall];
@@ -78,6 +78,33 @@
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
     [audioPlayer prepareToPlay];
     [audioPlayer play];
+}
+
+- (void) dropCredit
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSTimer * timer = [NSTimer scheduledTimerWithTimeInterval:0.001
+                                                           target:self
+                                                         selector:@selector(decreaseCredit:)
+                                                         userInfo:nil
+                                                          repeats:YES];
+    });
+
+    
+}
+
+- (void) decreaseCredit:(NSTimer *) timer
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if  ([HMUser currentUser].credits.floatValue <= 0.0f) {
+            [timer invalidate];
+        } else {
+            NSDecimalNumber * oneCent = [NSDecimalNumber decimalNumberWithString:@"0.01"];
+            [HMUser currentUser].credits =  [[HMUser currentUser].credits decimalNumberBySubtracting:oneCent];
+            [self updateCredits];
+        }
+    });
+
 }
 
 
