@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HMMusicDiscoveryVC : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *UserNameCreditsButton;
+@property (weak, nonatomic) IBOutlet UIButton *percentage;
 
 @end

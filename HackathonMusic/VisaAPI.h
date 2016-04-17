@@ -12,7 +12,9 @@
 @interface VisaAPI : NSObject
 @property (strong, nonatomic) NSString * status;
 @property (strong, nonatomic) NSString * response;
+@property (nonatomic, copy) void (^callFinished)(NSDictionary * response);
 
++(VisaAPI *) shared;
 
 + (void)triggerCall;
 

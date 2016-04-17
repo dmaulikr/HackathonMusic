@@ -41,7 +41,7 @@
 
 - (void) loadTracks
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"songs" ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"goldplay" ofType:@"json"];
     NSString *JSON = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:NULL];
     NSError *error =  nil;
     NSArray * jsonsongs = [NSJSONSerialization JSONObjectWithData:[JSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
@@ -53,11 +53,11 @@
         NSURL * url = [[NSBundle mainBundle] URLForResource:song.musicFileName
                                               withExtension:@"mp3"];
         
-//        AVPlayerItem * item = [[AVPlayerItem alloc] initWithURL:url];
-//        [self.player insertItem:item
-//                      afterItem:nil];
+        AVPlayerItem * item = [[AVPlayerItem alloc] initWithURL:url];
+        [self.player insertItem:item
+                      afterItem:nil];
     }
-
+    self.songs = [songs copy];
 }
 
 
