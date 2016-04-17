@@ -91,7 +91,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="qmb-Sr-Cuu"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="CreditsLabel" destination="pJD-4R-I4j" id="LZD-8X-7ah"/>
                         <outlet property="ResponseLabel" destination="RSE-ya-3B9" id="mIj-zP-13H"/>
+                        <outlet property="UsernameLabel" destination="gfT-MR-Ko3" id="d4g-QZ-Vt8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMw-YR-4F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,7 +163,9 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="Awf-U0-r7J"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="UserNameCreditsButton" destination="Bcj-K7-7oQ" id="KeQ-3j-RuZ"/>
                         <outlet property="bottomContainerVC" destination="47d-AM-xuY" id="zGN-uv-op9"/>
+                        <outlet property="percentage" destination="6YB-dY-8xQ" id="vZj-cy-A7a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6g-3m-6yO" userLabel="First Responder" sceneMemberID="firstResponder"/>
