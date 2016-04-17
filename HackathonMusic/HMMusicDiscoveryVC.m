@@ -21,7 +21,7 @@
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
 @property (nonatomic, strong) NSMutableArray *songInfoArray;
 @property (nonatomic, strong) BottomContainerVC *bottomContainerVC;
-
+@property (nonatomic) NSInteger progress;
 
 @end
 
@@ -39,14 +39,24 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = RGB(23, 23, 23);
-    [HMUser currentUser].credits = [NSDecimalNumber decimalNumberWithString:@"9"];
-
     
     self.bottomContainerVC = (BottomContainerVC *)self.childViewControllers.lastObject;
     
     [self setupCardView];
     
 
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSNumberFormatter * nf = [[NSNumberFormatter alloc] init];
+    [nf setMinimumFractionDigits:2];
+    [nf setMaximumFractionDigits:2];
+    [nf setNumberStyle:NSNumberFormatterCurrencyStyle];
+    NSString * str = [nf stringFromNumber:[HMUser currentUser].credits];
+    str = [[HMUser currentUser].name stringByAppendingFormat:@" %@",[nf stringFromNumber:[HMUser currentUser].credits]];
+    [self.UserNameCreditsButton setTitle:str forState:UIControlStateNormal];
 }
 
 -(void)setupCardView{
@@ -172,5 +182,14 @@
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
 }
 
-
+- (void) setProgress:(NSInteger)progress
+{
+    if (progress > 100) {
+        progress = 100;
+    } else if (progress < 0) {
+        progress = 0;
+    }
+    _progress = progress;
+    
+}
 @end

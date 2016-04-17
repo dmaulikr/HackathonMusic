@@ -28,12 +28,26 @@
     self.minCredits = [NSDecimalNumber decimalNumberWithString:@"8"];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.UsernameLabel.text = [HMUser currentUser].name;
+    
+    NSNumberFormatter * nf = [[NSNumberFormatter alloc] init];
+    [nf setMinimumFractionDigits:2];
+    [nf setMaximumFractionDigits:2];
+    [nf setNumberStyle:NSNumberFormatterCurrencyStyle];
+    self.CreditsLabel.text = [nf stringFromNumber:[HMUser currentUser].credits];
+}
+
 
 - (IBAction)TriggerAsyncCall:(id)sender {
     NSComparisonResult comparison =[[HMUser currentUser].credits compare:self.minCredits];
     if (comparison == NSOrderedDescending) {
         [VisaAPI shared].callFinished = ^ void (NSDictionary * response) {
-            self.ResponseLabel.text = response.description;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.ResponseLabel.text = response.description;
+            });
         };
         [VisaAPI triggerCall];
         

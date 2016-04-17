@@ -16,6 +16,9 @@
     
     dispatch_once(&pred, ^{
         shared = [[HMUser alloc] init];
+        shared.name = @"Steve Asiv";
+        shared.credits = [NSDecimalNumber decimalNumberWithString:@"0"];
+
     });
     return shared;
 }
