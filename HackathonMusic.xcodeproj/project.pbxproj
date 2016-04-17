@@ -41,6 +41,7 @@
 		B000AC081CC3124D00781D6A /* WillIAMPiaMiaGirlsBoys.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B000ABFE1CC3124D00781D6A /* WillIAMPiaMiaGirlsBoys.mp3 */; };
 		B000AC091CC3124D00781D6A /* YoungThugDigitsMeekMill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B000ABFF1CC3124D00781D6A /* YoungThugDigitsMeekMill.mp3 */; };
 		B000AC0B1CC3141500781D6A /* goldplay.json in Resources */ = {isa = PBXBuildFile; fileRef = B000AC0A1CC3141500781D6A /* goldplay.json */; };
+		B04D7C141CC3B77800D459D9 /* COINSLOT DROP.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B04D7C131CC3B77800D459D9 /* COINSLOT DROP.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		B000ABFF1CC3124D00781D6A /* YoungThugDigitsMeekMill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = YoungThugDigitsMeekMill.mp3; sourceTree = "<group>"; };
 		B000AC0A1CC3141500781D6A /* goldplay.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = goldplay.json; sourceTree = "<group>"; };
 		B04D7C121CC3B5DA00D459D9 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
+		B04D7C131CC3B77800D459D9 /* COINSLOT DROP.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "COINSLOT DROP.mp3"; sourceTree = "<group>"; };
 		BD0BD7DE1A21073C4609B058 /* Pods-HackathonMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		CF1FFA21F4D2044E233BEE47 /* Pods-HackathonMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackathonMusic/Pods-HackathonMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,6 +299,7 @@
 		B000ABF31CC2E96B00781D6A /* MusicFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B04D7C131CC3B77800D459D9 /* COINSLOT DROP.mp3 */,
 				B000ABF61CC3124D00781D6A /* AlunaGeorgeIRemember.mp3 */,
 				B000ABF71CC3124D00781D6A /* ASAPFergMissyElliotStrive.mp3 */,
 				B000ABF81CC3124D00781D6A /* DrakePopStyle.mp3 */,
@@ -438,6 +441,7 @@
 				B000AC041CC3124D00781D6A /* JahkoyallofYOU.mp3 in Resources */,
 				B000ABDD1CC2A1B600781D6A /* visavis_keyAndCertBundle.p12 in Resources */,
 				B000AC061CC3124D00781D6A /* LecraeDriaIlluminate.mp3 in Resources */,
+				B04D7C141CC3B77800D459D9 /* COINSLOT DROP.mp3 in Resources */,
 				8EF1C2081CC2784300C394AF /* Assets.xcassets in Resources */,
 				8EF1C2061CC2784300C394AF /* Main.storyboard in Resources */,
 				B000AC051CC3124D00781D6A /* KAYTRANADAGLOWEDUPAndersonPaak.mp3 in Resources */,

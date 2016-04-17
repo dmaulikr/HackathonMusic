@@ -9,6 +9,7 @@
 #import "SettingsVC.h"
 #import "VisaAPI.h"
 #import "HMUser.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface SettingsVC ()
 
@@ -20,6 +21,9 @@
 @end
 
 @implementation SettingsVC
+{
+    AVAudioPlayer * audioPlayer;
+}
 
 - (void) viewDidLoad
 {
@@ -53,7 +57,9 @@
             [HMUser currentUser].credits =  [NSDecimalNumber decimalNumberWithString:@"0"];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.ResponseLabel.text = response.description;
+                [self playSound];
                 [self updateCredits];
+                
             });
         };
         [VisaAPI triggerCall];
@@ -64,6 +70,14 @@
         [alert addAction:action];
         [self presentViewController:alert animated:YES completion:nil];
     }
+}
+
+- (void) playSound
+{
+    NSURL * url = [[NSBundle mainBundle] URLForResource:@"COINSLOT DROP" withExtension:@"mp3"];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
+    [audioPlayer prepareToPlay];
+    [audioPlayer play];
 }
 
 
