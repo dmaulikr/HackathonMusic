@@ -56,7 +56,10 @@
     if (comparison == NSOrderedDescending) {
         [VisaAPI shared].callFinished = ^ void (NSDictionary * response) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.ResponseLabel.text = response.description;
+                NSString * transID = response[@"transactionIdentifier"];
+                NSString * approvalCode = response[@"approvalCode"];
+                NSString * format = [NSString stringWithFormat:@"Transaction ID:\n%@\nApproval Code:\n%@",transID,approvalCode];
+                self.ResponseLabel.text = format;
                 [self playSound];
             });
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

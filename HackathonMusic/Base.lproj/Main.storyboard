@@ -16,6 +16,7 @@
             <string>Gotham-Bold</string>
             <string>Gotham-Bold</string>
             <string>Gotham-Bold</string>
+            <string>Gotham-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -51,8 +52,8 @@
                                     <action selector="TriggerAsyncCall:" destination="9hP-32-Chh" eventType="touchUpInside" id="f3z-Mj-Ehd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREDITS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJD-4R-I4j">
-                                <rect key="frame" x="20" y="55" width="335" height="206.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJD-4R-I4j">
+                                <rect key="frame" x="40" y="55" width="335" height="206.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="206.5" id="DZ5-cd-Bnb"/>
                                     <constraint firstAttribute="width" constant="335" id="kCc-JC-H2U"/>
@@ -61,12 +62,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-ya-3B9">
-                                <rect key="frame" x="37" y="300" width="300" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSE-ya-3B9">
+                                <rect key="frame" x="93.5" y="300" width="187.5" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="zfC-wT-71W"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -114,10 +115,10 @@
                             <constraint firstItem="gfT-MR-Ko3" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="RSX-pr-2Br"/>
                             <constraint firstItem="Pfd-b1-mMv" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="ZpA-vH-dyD"/>
                             <constraint firstItem="eRT-3d-npY" firstAttribute="top" secondItem="RSE-ya-3B9" secondAttribute="bottom" constant="8" id="aKP-sI-cfi"/>
-                            <constraint firstItem="RSE-ya-3B9" firstAttribute="width" secondItem="GMh-bO-lIa" secondAttribute="width" multiplier="0.8" id="coN-9n-1VT"/>
+                            <constraint firstItem="RSE-ya-3B9" firstAttribute="width" secondItem="GMh-bO-lIa" secondAttribute="width" multiplier="0.5" id="coN-9n-1VT"/>
                             <constraint firstItem="gfT-MR-Ko3" firstAttribute="top" secondItem="sCu-Dq-116" secondAttribute="bottom" constant="31" id="fiQ-s1-znx"/>
                             <constraint firstItem="gfT-MR-Ko3" firstAttribute="top" secondItem="sCu-Dq-116" secondAttribute="bottom" constant="46" id="hht-H2-vgo"/>
-                            <constraint firstItem="pJD-4R-I4j" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="iJY-Ny-Coy"/>
+                            <constraint firstItem="pJD-4R-I4j" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" constant="20" id="iJY-Ny-Coy"/>
                             <constraint firstItem="pJD-4R-I4j" firstAttribute="top" secondItem="Pfd-b1-mMv" secondAttribute="bottom" constant="-3" id="kwU-B1-oIe"/>
                             <constraint firstItem="TBR-Ju-o4t" firstAttribute="centerX" secondItem="GMh-bO-lIa" secondAttribute="centerX" id="rbW-nC-erS"/>
                         </constraints>
